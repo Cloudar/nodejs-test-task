@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.png">
+
+    <title>.:Brain-Speed multi chat:.</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="rooms.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="vendor/js/html5shiv.js"></script>
+      <script src="vendor/js/respond.min.js"></script><![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+
+    </div> <!-- /container -->
+    <div class="helper">
+
+    </div> <!-- /helper -->
+
+    <script type="text/template" id="stickers-template">
+        <div class="stickers-wrapper">
+
+        </div>
+    </script>
+    <script type="text/template" id="events-template">
+        <div class="events-wrapper">
+
+        </div>
+    </script>
+    <script type="text/template" id="sticker-message-template">
+        <div class="box">
+            <a href="#" class="ava">
+                <img alt="" src="i/ava.png">
+            </a>
+            <div class="comment">
+                <p>
+                    <%= message %>
+                </p>
+                <span class="time"> </span>
+            </div>
+        </div>
+    </script>
+    <script type="text/template" id="sticker-template">
+        <div class="sticker sticker-id-<%=id%>" style="top: 150px; left: 150px;">
+            <span class="sticker-numb"><%= id%></span>
+            <div class="sticker-popup">
+                <div class="title">Theme</div>
+                <span class="close-btn">&#215;</span>
+                <div class="sc sc-sticker">
+                    <div class="scrollbar" style="height: 241px;">
+                        <div class="track" style="height: 241px;">
+                            <div class="thumb" style="top: 100.70772946859904px; height: 140.292270531401px;">
+                                <div class="end"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="viewport">
+                        <div class="overview" style="top: -173px;">
+
+                        </div>
+                    </div>
+                </div>
+                <form>
+                    <a href="#" class="ava">
+                        <img alt="" src="i/ava.png">
+                    </a>
+                    <input type="text" placeholder="Comment it!">
+                </form>
+            </div>
+        </div>
+    </script>
+    <script type="text/template" id="rooms-template">
+        <h1> Welcome, <%= name %>!</h1>
+        <div class="rooms">
+        </div>
+    </script>
+    <script type="text/template" id="room-template">
+        <div class="col-md-4 room" id="room-<%= id %>">
+            <h2 class="title"><%= id %></h2>
+        </div>
+    </script>
+    <script type="text/template" id="singin-template">
+        <form class="form-signin">
+            <h2 class="form-signin-heading">Please sign in</h2>
+            <span style="float:left; margin-right: 11px">Rooms: </span>
+            <input id="room_1" class="form-control room-number" value="1" type="number" min="0" step="1">
+            <input id="room_2" class="form-control room-number" value="2" type="number" min="0" step="1">
+            <input id="room_3" class="form-control room-number" value="3" type="number" min="0" step="1">
+            <input id="room_4" class="form-control room-number" value="4" type="number" min="0" step="1">
+            <input type="text" class="form-control signin-user-name" placeholder="Name" autofocus>
+            <button class="btn btn-lg btn-primary btn-block signin-btn" type="button">Sign in</button>
+        </form>
+    </script>
+
+    <!--Loading socket.io script or anything else for comet connection-->
+    <script src="vendor/js/jquery.js"></script>
+    <script src="vendor/js/json2.js"></script>
+    <script src="vendor/js/lodash.js"></script>
+    <script src="vendor/js/backbone.js"></script>
+    <script src="vendor/js/backbone.marionette.js"></script>
+    <script src="vendor/js/jquery.tinyscrollbar.min.js"></script>
+    <script src="app/main.js"></script>
+  </body>
+</html>
